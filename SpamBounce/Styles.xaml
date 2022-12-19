@@ -1,0 +1,116 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--<Style TargetType="ListBoxItem">
+        <Style.Resources>
+            <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="LightGreen"/>
+            <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="LightBlue"/>
+        </Style.Resources>
+    </Style>-->
+
+    <!--<Style x:Key="{x:Type ListBoxItem}" TargetType="ListBoxItem">
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Border 
+          Name="Border"
+          Padding="2"
+          SnapsToDevicePixels="true">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="true">
+                            <Setter Property="Background"
+                    Value="DimGray"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground"
+                    Value="{StaticResource DisabledForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <!--<SolidColorBrush x:Key="SelectedBackgroundBrush" Color="#888" />
+    <SolidColorBrush x:Key="DisabledForegroundBrush" Color="#DDD" />-->
+
+    <Style x:Key="NewRuleButton" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.Resources>
+                            <Style x:Key="CommandText" TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF448DCA" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Resources>
+                        <DockPanel x:Name="imageContainer" HorizontalAlignment="Center" DockPanel.Dock="Left">
+                            <Image x:Name="image" VerticalAlignment="Center" Source="Resources\document_new.png" Width="24" Height="24" />
+                            <TextBlock Style="{StaticResource CommandText}" VerticalAlignment="Center">New</TextBlock>
+                        </DockPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ChangeRuleButton" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.Resources>
+                            <Style x:Key="CommandText" TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF448DCA" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Resources>
+                        <DockPanel x:Name="imageContainer" HorizontalAlignment="Center" DockPanel.Dock="Left">
+                            <Image x:Name="image" VerticalAlignment="Center" Source="Resources\document_edit.png" Width="24" Height="24" />
+                            <TextBlock Style="{StaticResource CommandText}" VerticalAlignment="Center">Change</TextBlock>
+                        </DockPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DeleteRuleButton" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <Grid.Resources>
+                            <Style x:Key="CommandText" TargetType="{x:Type TextBlock}">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#FF448DCA" />
+                                        <Setter Property="Foreground" Value="White" />
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Grid.Resources>
+                        <DockPanel x:Name="imageContainer" HorizontalAlignment="Center" DockPanel.Dock="Left">
+                            <Image x:Name="image" VerticalAlignment="Center" Source="Resources\document_delete.png" Width="24" Height="24" />
+                            <TextBlock Style="{StaticResource CommandText}" VerticalAlignment="Center">Delete</TextBlock>
+                        </DockPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="SpamBounce.Wizard.Page1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SpamBounce"
+             mc:Ignorable="d" 
+             d:DesignHeight="420" d:DesignWidth="500">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ObjectDataProvider x:Key="bounceEmail"/>
+            <local:InverseBooleanConverter x:Key="inverseConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="..\Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Page.Resources>
+    <Grid DataContext="{StaticResource bounceEmail}">
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition Height="32"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Email Address:" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Center" Target="{Binding}" />
+        <TextBox Grid.Column="1" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Left" Name="textEmail" VerticalAlignment="Center" Width="300" Text="{Binding Path=EmailAddress}" IsReadOnly="{Binding Path=IsNew, Converter={StaticResource inverseConverter}}" />
+        <Label Content="Send On Behalf:" Grid.Row="2" Height="28" HorizontalAlignment="Left" Name="label2" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Left" Name="textSentOnBehalf" VerticalAlignment="Center" Width="300" Text="{Binding Path=SentOnBehalfName}"/>
+        <CheckBox Content="Delete Mail" Grid.Row="1" Height="16" HorizontalAlignment="Left" Name="checkDelete" VerticalAlignment="Center" Margin="5,7,0,7" IsChecked="{Binding Path=DeleteOriginalMessage}" />
+        <CheckBox Content="Attach Mail" Grid.Row="1" Grid.Column="1" Height="16" HorizontalAlignment="Left" Name="checkAttach" VerticalAlignment="Center" Margin="5,7,0,7" IsChecked="{Binding Path=AttachOriginalMessage}" />
+        <Label Content="Forward:" Grid.Row="3" Height="28" HorizontalAlignment="Left" Name="label4" VerticalAlignment="Center" />
+        <TextBox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Height="23" HorizontalAlignment="Left" Name="textForward" VerticalAlignment="Center" Width="300" Text="{Binding Path=Forward}"/>
+        <Label Content="Message:" Grid.ColumnSpan="2" Grid.Row="4" Height="28" HorizontalAlignment="Left" Name="label3" VerticalAlignment="Top" />
+        <TextBox Grid.ColumnSpan="5" Grid.Row="5" Height="258" HorizontalAlignment="Left" Name="textMessage" VerticalAlignment="Top" Width="486" Text="{Binding Path=Message}" Padding="1" UseLayoutRounding="True" Margin="6,0,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" />
+        <Button Content="Cancel" Grid.Column="4" Grid.Row="6" Height="23" HorizontalAlignment="Right" Name="CancelButton" VerticalAlignment="Center" Width="75" IsCancel="False" Margin="0,4,4,4" Click="CancelButton_Click" />
+        <Button Content="OK" Grid.Column="3" Grid.Row="6" Height="23" HorizontalAlignment="Right"  Name="OKButton" VerticalAlignment="Center" Width="75" Margin="0,4,4,4" Click="OKButton_Click" />
+      
+    </Grid>
+</Page>

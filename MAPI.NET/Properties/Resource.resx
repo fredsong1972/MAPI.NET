@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="htmlForwardHeader" xml:space="preserve">
+    <value>&lt;p class="MsoNormal"&gt; &lt;span style="font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D"&gt; &amp;nbsp; &lt;/span&gt;  &lt;/p&gt;
+ &lt;p class="MsoNormal"&gt; &lt;span style="font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D"&gt; &amp;nbsp; &lt;/span&gt;  &lt;/p&gt;
+
+ &lt;div&gt; 
+
+ &lt;div style="border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm"&gt; 
+ &lt;p class="MsoNormal"&gt; &lt;b&gt; &lt;span lang="EN-US" style="font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;"&gt; From:&lt;/span&gt; &lt;/b&gt; &lt;span lang="EN-US" style="font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;"&gt; {0} [mailto:{1}]
+  &lt;br&gt; 
+ &lt;b&gt; Sent:&lt;/b&gt;  {2}&lt;br&gt; 
+ &lt;b&gt; To:&lt;/b&gt;  {3}&lt;br&gt; 
+ &lt;b&gt; Subject:&lt;/b&gt;  {4}&lt;/span&gt;  &lt;/p&gt;
+
+ &lt;/div&gt; 
+ &lt;/div&gt; 
+
+ &lt;p class="MsoNormal"&gt; &amp;nbsp;  &lt;/p&gt;</value>
+  </data>
+  <data name="rtfForwardHeader" xml:space="preserve">
+    <value>\uc1\pard\plain\deftab360 \f0\fs20 \par
+\par
+-----Original Message-----\par
+From: {0} [mailto:{1}]\par
+Sent: {2}\par
+To: {3}\par
+Subject: {4}\par
+\par</value>
+  </data>
+  <data name="rtfHtmlForwardHeader" xml:space="preserve">
+    <value>[\*\htmltag64 &lt;p class="MsoNormal"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &lt;span style="font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &amp;nbsp;]\htmlrtf \'a0\htmlrtf0 
+[\*\htmltag92 &lt;/span&gt;]\htmlrtf ]\htmlrtf0 \htmlrtf\par]\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+[\*\htmltag72 &lt;/p&gt;]
+[\*\htmltag0 \par ]
+[\*\htmltag64 &lt;p class="MsoNormal"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &lt;span style="font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &amp;nbsp;]\htmlrtf \'a0\htmlrtf0 
+[\*\htmltag92 &lt;/span&gt;]\htmlrtf ]\htmlrtf0 \htmlrtf\par]\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+[\*\htmltag72 &lt;/p&gt;]
+[\*\htmltag0 \par ]
+[\*\htmltag96 &lt;div&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag0 \par ]
+[\*\htmltag96 &lt;div style="border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag0 \par ]
+[\*\htmltag64 &lt;p class="MsoNormal"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &lt;b&gt;]\htmlrtf [\b \htmlrtf0 
+[\*\htmltag84 &lt;span lang="EN-US" style="font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;"&gt;]\htmlrtf [\lang1033 \htmlrtf0 From:
+[\*\htmltag92 &lt;/span&gt;]\htmlrtf ]\htmlrtf0 
+[\*\htmltag92 &lt;/b&gt;]\htmlrtf ]\htmlrtf0 
+[\*\htmltag84 &lt;span lang="EN-US" style="font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;"&gt;]\htmlrtf [\lang1033 \htmlrtf0  [0] [mailto:[1]]
+[\*\htmltag4 \par ]\htmlrtf  \htmlrtf0 
+[\*\htmltag116 &lt;br&gt;]\htmlrtf \line
+\htmlrtf0 
+[\*\htmltag4 \par ]
+[\*\htmltag84 &lt;b&gt;]\htmlrtf [\b \htmlrtf0 Sent:
+[\*\htmltag92 &lt;/b&gt;]\htmlrtf ]\htmlrtf0  [2]
+[\*\htmltag116 &lt;br&gt;]\htmlrtf \line
+\htmlrtf0 
+[\*\htmltag4 \par ]
+[\*\htmltag84 &lt;b&gt;]\htmlrtf [\b \htmlrtf0 To:
+[\*\htmltag92 &lt;/b&gt;]\htmlrtf ]\htmlrtf0  [3]
+[\*\htmltag116 &lt;br&gt;]\htmlrtf \line
+\htmlrtf0 
+[\*\htmltag4 \par ]
+[\*\htmltag84 &lt;b&gt;]\htmlrtf [\b \htmlrtf0 Subject:
+[\*\htmltag92 &lt;/b&gt;]\htmlrtf ]\htmlrtf0  [4]
+[\*\htmltag92 &lt;/span&gt;]\htmlrtf ]\htmlrtf0 \htmlrtf\par]\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+[\*\htmltag72 &lt;/p&gt;]
+[\*\htmltag0 \par ]
+[\*\htmltag104 &lt;/div&gt;]\htmlrtf ]\htmlrtf0 
+[\*\htmltag0 \par ]
+[\*\htmltag104 &lt;/div&gt;]\htmlrtf ]\htmlrtf0 
+[\*\htmltag0 \par ]
+[\*\htmltag64 &lt;p class="MsoNormal"&gt;]\htmlrtf [\htmlrtf0 
+[\*\htmltag84 &amp;nbsp;]\htmlrtf \'a0\htmlrtf0 \htmlrtf\par]\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+[\*\htmltag72 &lt;/p&gt;]
+[\*\htmltag0 \par ]</value>
+  </data>
+  <data name="rtfHtmlHeader" xml:space="preserve">
+    <value>{\*\htmltag64 &lt;p class=\"MsoNormal\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &lt;span style=\"font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &amp;nbsp;}\htmlrtf \'a0\htmlrtf0 
+{\*\htmltag92 &lt;/span&gt;}\htmlrtf }\htmlrtf0 \htmlrtf\par}\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+{\*\htmltag72 &lt;/p&gt;}
+{\*\htmltag0 \par }
+{\*\htmltag64 &lt;p class=\"MsoNormal\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &lt;span style=\"font-size:11.0pt; font-family:&amp;quot;Calibri&amp;quot;,&amp;quot;sans-serif&amp;quot;; color:#1F497D\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &amp;nbsp;}\htmlrtf \'a0\htmlrtf0 
+{\*\htmltag92 &lt;/span&gt;}\htmlrtf }\htmlrtf0 \htmlrtf\par}\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+{\*\htmltag72 &lt;/p&gt;}
+{\*\htmltag0 \par }
+{\*\htmltag96 &lt;div&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag0 \par }
+{\*\htmltag96 &lt;div style=\"border:none; border-top:solid #B5C4DF 1.0pt; padding:3.0pt 0cm 0cm 0cm\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag0 \par }
+{\*\htmltag64 &lt;p class=\"MsoNormal\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &lt;b&gt;}\htmlrtf {\b \htmlrtf0 
+{\*\htmltag84 &lt;span lang=\"EN-US\" style=\"font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;\"&gt;}\htmlrtf {\lang1033 \htmlrtf0 From:
+{\*\htmltag92 &lt;/span&gt;}\htmlrtf }\htmlrtf0 
+{\*\htmltag92 &lt;/b&gt;}\htmlrtf }\htmlrtf0 
+{\*\htmltag84 &lt;span lang=\"EN-US\" style=\"font-size:10.0pt; font-family:&amp;quot;Tahoma&amp;quot;,&amp;quot;sans-serif&amp;quot;\"&gt;}\htmlrtf {\lang1033 \htmlrtf0  {0} [mailto:{1}]
+{\*\htmltag4 \par }\htmlrtf  \htmlrtf0 
+{\*\htmltag116 &lt;br&gt;}\htmlrtf \line
+\htmlrtf0 
+{\*\htmltag4 \par }
+{\*\htmltag84 &lt;b&gt;}\htmlrtf {\b \htmlrtf0 Sent:
+{\*\htmltag92 &lt;/b&gt;}\htmlrtf }\htmlrtf0  {2}
+{\*\htmltag116 &lt;br&gt;}\htmlrtf \line
+\htmlrtf0 
+{\*\htmltag4 \par }
+{\*\htmltag84 &lt;b&gt;}\htmlrtf {\b \htmlrtf0 To:
+{\*\htmltag92 &lt;/b&gt;}\htmlrtf }\htmlrtf0  {3}
+{\*\htmltag116 &lt;br&gt;}\htmlrtf \line
+\htmlrtf0 
+{\*\htmltag4 \par }
+{\*\htmltag84 &lt;b&gt;}\htmlrtf {\b \htmlrtf0 Subject:
+{\*\htmltag92 &lt;/b&gt;}\htmlrtf }\htmlrtf0  {4}
+{\*\htmltag92 &lt;/span&gt;}\htmlrtf }\htmlrtf0 \htmlrtf\par}\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+{\*\htmltag72 &lt;/p&gt;}
+{\*\htmltag0 \par }
+{\*\htmltag104 &lt;/div&gt;}\htmlrtf }\htmlrtf0 
+{\*\htmltag0 \par }
+{\*\htmltag104 &lt;/div&gt;}\htmlrtf }\htmlrtf0 
+{\*\htmltag0 \par }
+{\*\htmltag64 &lt;p class=\"MsoNormal\"&gt;}\htmlrtf {\htmlrtf0 
+{\*\htmltag84 &amp;nbsp;}\htmlrtf \'a0\htmlrtf0 \htmlrtf\par}\htmlrtf0
+\htmlrtf \par
+\htmlrtf0 
+{\*\htmltag72 &lt;/p&gt;}
+{\*\htmltag0 \par }</value>
+  </data>
+  <data name="textForwardHeader" xml:space="preserve">
+    <value>From: {0} [mailto:{1}]
+Sent: {2}
+To: {3}
+Subject: {4}</value>
+  </data>
+</root>
