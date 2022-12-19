@@ -12,4 +12,4 @@ Spambounce outlook addin project
 
 ## Getting Started
 
-[here](Document/Home.md)
+[here](Help/Home.md)

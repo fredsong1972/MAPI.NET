@@ -1,0 +1,60 @@
+# OpenProfileSection Method
+
+
+
+
+## Definition
+**Namespace:** <a href="5bef4637-66f8-16d4-e5f4-4d0da57a1538.md">MAPI.NET</a>  
+**Assembly:** MAPI.NET (in MAPI.NET.dll) Version: 1.0.0
+
+**C#**
+``` C#
+HRESULT OpenProfileSection(
+	ref Guid lpUID,
+	ref Guid lpInterface,
+	uint ulFlags,
+	out IntPtr lppProfSect
+)
+```
+**VB**
+``` VB
+Function OpenProfileSection ( 
+	ByRef lpUID As Guid,
+	ByRef lpInterface As Guid,
+	ulFlags As UInteger,
+	<OutAttribute> ByRef lppProfSect As IntPtr
+) As HRESULT
+```
+**C++**
+``` C++
+HRESULT OpenProfileSection(
+	Guid% lpUID, 
+	Guid% lpInterface, 
+	unsigned int ulFlags, 
+	[OutAttribute] IntPtr% lppProfSect
+)
+```
+**F#**
+``` F#
+abstract OpenProfileSection : 
+        lpUID : Guid byref * 
+        lpInterface : Guid byref * 
+        ulFlags : uint32 * 
+        lppProfSect : IntPtr byref -> HRESULT 
+```
+
+
+
+#### Parameters
+<dl><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.guid" target="_blank" rel="noopener noreferrer">Guid</a></dt><dd>\[Missing &lt;param name="lpUID"/&gt; documentation for "M:MAPI.NET.IMAPISession.OpenProfileSection(System.Guid@,System.Guid@,System.UInt32,System.IntPtr@)"\]</dd><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.guid" target="_blank" rel="noopener noreferrer">Guid</a></dt><dd>\[Missing &lt;param name="lpInterface"/&gt; documentation for "M:MAPI.NET.IMAPISession.OpenProfileSection(System.Guid@,System.Guid@,System.UInt32,System.IntPtr@)"\]</dd><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.uint32" target="_blank" rel="noopener noreferrer">UInt32</a></dt><dd>\[Missing &lt;param name="ulFlags"/&gt; documentation for "M:MAPI.NET.IMAPISession.OpenProfileSection(System.Guid@,System.Guid@,System.UInt32,System.IntPtr@)"\]</dd><dt>  <a href="https://learn.microsoft.com/dotnet/api/system.intptr" target="_blank" rel="noopener noreferrer">IntPtr</a></dt><dd>\[Missing &lt;param name="lppProfSect"/&gt; documentation for "M:MAPI.NET.IMAPISession.OpenProfileSection(System.Guid@,System.Guid@,System.UInt32,System.IntPtr@)"\]</dd></dl>
+
+#### Return Value
+<a href="50596607-a328-ef10-6ea9-0448fbb7d197.md">HRESULT</a>  
+\[Missing &lt;returns&gt; documentation for "M:MAPI.NET.IMAPISession.OpenProfileSection(System.Guid@,System.Guid@,System.UInt32,System.IntPtr@)"\]
+
+## See Also
+
+
+#### Reference
+<a href="d28ec202-b730-fb1f-42ac-5545b0b43d47.md">IMAPISession Interface</a>  
+<a href="5bef4637-66f8-16d4-e5f4-4d0da57a1538.md">MAPI.NET Namespace</a>  
