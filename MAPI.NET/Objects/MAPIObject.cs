@@ -180,12 +180,19 @@ namespace MAPI.NET
     /// </summary>
     public class MAPIObject : IDisposable
     {
+        /// <exclude/>
         public const string MailItem = "IPM.Note";
+        /// <exclude/>
         public const string ContactItem = "IPM.Contact";
+        /// <exclude/>
         public const string AppointmentItem = "IPM.Appointment";
+        /// <exclude/>
         public const string MeetingItem = "IPM.Schedule.Meeting";
+        /// <exclude/>
         public const string MeetingRequestItem = "IPM.Schedule.Meeting.Request";
+        /// <exclude/>
         public const string MeetingCanceledItem = "IPM.Schedule.Meeting.Canceled";
+        /// <exclude/>
         public const string MeetingResponseItem = "IPM.Schedule.Meeting.Resp";
 
         static Guid IID_IMAPIProp = new Guid("00020303-0000-0000-C000-000000000046");
@@ -384,6 +391,12 @@ namespace MAPI.NET
             Dispose();
         }
 
+        /// <summary>
+        /// Copies or moves all properties, except for specifically excluded properties.
+        /// </summary>
+        /// <param name="excludeProps">>A property tag array that identifies the property tags that should be excluded from the copy or move operation</param>
+        /// <param name="mapiObject">A mapi prop object to receive the copied or moved properties</param>
+        /// <returns>true if successful; otherwise, false</returns>
         public bool CopyTo(uint[] excludeProps, MAPIObject mapiObject)
         {
             return CopyTo(excludeProps, mapiObject.mapiObj_);
@@ -393,7 +406,7 @@ namespace MAPI.NET
         /// Copies or moves all properties, except for specifically excluded properties.
         /// </summary>
         /// <param name="excludeProps">A property tag array that identifies the property tags that should be excluded from the copy or move operation.</param>
-        /// <param name="mapiObject">A mapi object to receive the copied or moved properties.</param>
+        /// <param name="mapiObject">A mapi prop object to receive the copied or moved properties.</param>
         /// <returns>true if successful; otherwise, false</returns>
         public bool CopyTo(uint[] excludeProps, IMAPIProp mapiObject)
         {
@@ -443,7 +456,12 @@ namespace MAPI.NET
             return IntPtr.Zero;
         }
 
-
+        /// <summary>
+        /// Get outlook properties
+        /// </summary>
+        /// <param name="data">data</param>
+        /// <param name="tags">array of tags</param>
+        /// <returns>dictionary of properties</returns>
         public Dictionary<uint, IPropValue> GetOutlookProperties(int data, uint[] tags)
         {
             uint[] outlookTags = GetOutlookPropTags(data, tags, false);
@@ -452,6 +470,12 @@ namespace MAPI.NET
             return GetProperties(outlookTags);
         }
 
+        /// <summary>
+        /// Get outlook properties
+        /// </summary>
+        /// <param name="data">data</param>
+        /// <param name="tag">tag</param>
+        /// <returns>property</returns>
         public IPropValue GetOutlookProperty(int data, uint tag)
         {
             uint[] outlookTags = GetOutlookPropTags(data, new uint[] { tag }, false);
@@ -460,6 +484,7 @@ namespace MAPI.NET
             return GetProperty(outlookTags[0]);
         }
 
+        /// <exclude/>
         public static explicit operator IntPtr (MAPIObject mapiObject)
         {
             IntPtr p = IntPtr.Zero;
@@ -522,6 +547,13 @@ namespace MAPI.NET
             return hResult == HRESULT.S_OK;
         }
 
+        /// <summary>
+        /// Get outlook property tags
+        /// </summary>
+        /// <param name="data">data</param>
+        /// <param name="properties">properties</param>
+        /// <param name="bCreate">create tag if not exist</param>
+        /// <returns>int array</returns>
         protected uint[] GetOutlookPropTags(int data, uint[] properties, bool bCreate)
         {
             Guid guidOutlook = new Guid(data, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46);
@@ -567,7 +599,15 @@ namespace MAPI.NET
             return tags.ToArray();
         }
 
-        protected uint GetOutlookPropTag(int data, uint tag, bool bCreate)
+        /// <summary>
+        /// Get one outlook property tag
+        /// </summary>
+        /// <param name="data">data</param>
+        /// <param name="property">property</param>
+        /// <param name="bCreate">create tag if not exists</param>
+        /// <returns>create tag if not exist</returns>
+        /// <exception cref="Exception"></exception>
+        protected uint GetOutlookPropTag(int data, uint property, bool bCreate)
         {
             Guid guidOutlook = new Guid(data, 0x0000, 0x0000, 0xC0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46);
             MAPINAMEID nameID = new MAPINAMEID(); ;
@@ -575,7 +615,7 @@ namespace MAPI.NET
             Marshal.StructureToPtr(guidOutlook, pGuid, true);
             nameID.pGuid = pGuid;
             nameID.ulKind = (int)MAPINameIDKind.MNID_ID;
-            nameID.Kind.lID = (int)tag;
+            nameID.Kind.lID = (int)property;
             IntPtr pNames = Marshal.AllocHGlobal(Marshal.SizeOf(typeof(MAPINAMEID)));
             Marshal.StructureToPtr(nameID, pNames, true);
             IntPtr pTags = IntPtr.Zero;

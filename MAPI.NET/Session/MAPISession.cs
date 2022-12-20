@@ -269,7 +269,9 @@ namespace MAPI.NET
             }
         }
 
-
+        /// <summary>
+        /// Get primary identity
+        /// </summary>
         public EntryID PrimaryIdentity
         {
             get
@@ -286,6 +288,9 @@ namespace MAPI.NET
             }
         }
 
+        /// <summary>
+        /// Get profile email address
+        /// </summary>
         public string ProfileEmailAddress
         {
             get
@@ -445,11 +450,11 @@ namespace MAPI.NET
             }
             return prop;
         }
-        
+
         /// <summary>
         /// Flush all outgoing messages. 
         /// </summary>
-        /// <returns></returns>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool SendAll()
         {
             bool bResult = false;
@@ -462,12 +467,14 @@ namespace MAPI.NET
             return bResult;
         }
 
+        /// <exclude/>
         public static IPropValue GetObjectProperty(IMAPIProp obj, uint tag)
         {
             Dictionary<uint, IPropValue> props = GetObjectProperties(obj, new uint[] { tag });
             return props.ContainsKey(tag) ? props[tag] : null;
         }
 
+        /// <exclude/>
         public static Dictionary<uint, IPropValue> GetObjectProperties(IMAPIProp obj, uint[] tags)
         {
             Dictionary<uint, IPropValue> props = new Dictionary<uint, IPropValue>();

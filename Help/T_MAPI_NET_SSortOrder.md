@@ -1,0 +1,60 @@
+# SSortOrder Structure
+
+
+Defines how to sort rows of a table, describing the column to use as the sort key and the direction of the sort.
+
+
+
+## Definition
+**Namespace:** <a href="N_MAPI_NET.md">MAPI.NET</a>  
+**Assembly:** MAPI.NET (in MAPI.NET.dll) Version: 1.0.1
+
+**C#**
+``` C#
+public struct SSortOrder
+```
+**VB**
+``` VB
+Public Structure SSortOrder
+```
+**C++**
+``` C++
+public value class SSortOrder
+```
+
+<table><tr><td><strong>Inheritance</strong></td><td><a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>  →  <a href="https://learn.microsoft.com/dotnet/api/system.valuetype" target="_blank" rel="noopener noreferrer">ValueType</a>  →  SSortOrder</td></tr>
+</table>
+
+
+
+## Methods
+<table>
+<tr>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.valuetype.equals#system-valuetype-equals(system-object)" target="_blank" rel="noopener noreferrer">Equals</a></td>
+<td>Indicates whether this instance and a specified object are equal.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.valuetype" target="_blank" rel="noopener noreferrer">ValueType</a>)</td></tr>
+<tr>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode#system-valuetype-gethashcode" target="_blank" rel="noopener noreferrer">GetHashCode</a></td>
+<td>Returns the hash code for this instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.valuetype" target="_blank" rel="noopener noreferrer">ValueType</a>)</td></tr>
+<tr>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.object.gettype#system-object-gettype" target="_blank" rel="noopener noreferrer">GetType</a></td>
+<td>Gets the <a href="https://learn.microsoft.com/dotnet/api/system.type" target="_blank" rel="noopener noreferrer">Type</a> of the current instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.object" target="_blank" rel="noopener noreferrer">Object</a>)</td></tr>
+<tr>
+<td><a href="https://learn.microsoft.com/dotnet/api/system.valuetype.tostring#system-valuetype-tostring" target="_blank" rel="noopener noreferrer">ToString</a></td>
+<td>Returns the fully qualified type name of this instance.<br />(Inherited from <a href="https://learn.microsoft.com/dotnet/api/system.valuetype" target="_blank" rel="noopener noreferrer">ValueType</a>)</td></tr>
+</table>
+
+## Fields
+<table>
+<tr>
+<td><a href="F_MAPI_NET_SSortOrder_ulOrder.md">ulOrder</a></td>
+<td>The order in which the data is to be sorted.</td></tr>
+<tr>
+<td><a href="F_MAPI_NET_SSortOrder_ulPropTag.md">ulPropTag</a></td>
+<td>Property tag identifying the sort key or, for a categorized sort, the category column.</td></tr>
+</table>
+
+## See Also
+
+
+#### Reference
+<a href="N_MAPI_NET.md">MAPI.NET Namespace</a>  

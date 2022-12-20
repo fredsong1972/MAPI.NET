@@ -6,6 +6,9 @@ using System.Runtime.InteropServices;
 
 namespace MAPI.NET
 {
+    /// <summary>
+    /// Extension
+    /// </summary>
     static class Extension
     {
         public static IntPtr MarshalToAdrListPtr(this ADRENTRY[] entries)

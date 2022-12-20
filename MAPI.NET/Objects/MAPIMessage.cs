@@ -507,6 +507,9 @@ namespace MAPI.NET
             }
         }
 
+        /// <summary>
+        /// Gets/sets message format
+        /// </summary>
         public MessageFormat MessageFormat
         {
             get
@@ -552,6 +555,11 @@ namespace MAPI.NET
                 messageFlags_ = (uint)values[PropTags.PR_MESSAGE_FLAGS].AsInt32;
         }
 
+        /// <summary>
+        /// Add recipient
+        /// </summary>
+        /// <param name="strEmail">recipient email</param>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool AddRecipient(string strEmail)
         {
             return AddRecipient(strEmail, RecipientType.TO, AddressType.SMTP, null);
@@ -625,6 +633,11 @@ namespace MAPI.NET
             return SetSender(entry);
         }
 
+        /// <summary>
+        /// Set sender of the message
+        /// </summary>
+        /// <param name="addressEntry">address entry ID</param>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool SetSender(EntryID addressEntry)
         {
             return SetPropertyValue((uint)PropTags.PR_SENT_REPRESENTING_ENTRYID, addressEntry.AsByteArray);

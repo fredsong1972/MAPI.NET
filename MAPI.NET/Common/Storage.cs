@@ -4,7 +4,9 @@ using System.Runtime.InteropServices;
 namespace MAPI.NET
 {
     using  Ole = System.Runtime.InteropServices.ComTypes;
-
+    /// <summary>
+    /// 
+    /// </summary>
     internal enum STGM : uint
     {
         DIRECT = 0x00000000,

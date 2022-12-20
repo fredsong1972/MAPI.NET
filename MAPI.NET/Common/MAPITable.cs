@@ -200,7 +200,7 @@ namespace MAPI.NET
         /// <summary>
         /// Initializes a new instance of the MAPITable class. 
         /// </summary>
-        /// <param name="mapiTable"></param>
+        /// <param name="mapiTable">mapi table</param>
         public MAPITable(IMAPITable mapiTable)
         {
             tb_ = mapiTable;
@@ -209,7 +209,7 @@ namespace MAPI.NET
         /// Defines the particular properties and order of properties to appear as columns in the table.
         /// </summary>
         /// <param name="tags">An array of property tags identifying properties to be included as columns in the table</param>
-        /// <returns></returns>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool SetColumns(PropTags[] tags)
         {
             uint[] t = new uint[tags.Length + 1];
@@ -236,7 +236,7 @@ namespace MAPI.NET
         /// </summary>
         /// <param name="lRowCount">Maximum number of rows to be returned.</param>
         /// <param name="sRows">an SRow array holding the table rows.</param>
-        /// <returns></returns>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool QueryRows(int lRowCount, out SRow[] sRows)
         {
             IntPtr pRowSet = IntPtr.Zero;
@@ -300,7 +300,7 @@ namespace MAPI.NET
         /// </summary>
         /// <param name="bookMark">The bookmark identifying the starting position for the seek operation.</param>
         /// <param name="rowCount">The signed count of the number of rows to move, starting from the bookmark.</param>
-        /// <returns></returns>
+        /// <returns>true, if successful; otherwise, failed</returns>
         public bool SeekRow(BookMark bookMark, int rowCount)
         {
             IntPtr pRowsSought;

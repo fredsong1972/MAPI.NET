@@ -5,6 +5,9 @@ using System.Runtime.InteropServices.ComTypes;
 namespace MAPI.NET
 {
     using Ole = System.Runtime.InteropServices.ComTypes;
+    /// <summary>
+    /// MAPI Native definition
+    /// </summary>
     class MAPINative
     {
         [DllImport("MAPI32.dll")]

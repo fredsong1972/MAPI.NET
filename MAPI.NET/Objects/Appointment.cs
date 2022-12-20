@@ -5,6 +5,9 @@ using System.Text;
 
 namespace MAPI.NET
 {
+    /// <summary>
+    /// The Appointment class is used to maintain and provide access to the properties of appointments.
+    /// </summary>
     public class Appointment : MAPIMessage
     {
         enum OutlookTag
@@ -17,6 +20,7 @@ namespace MAPI.NET
             OUTLOOK_APPOINTMENT_RESPONSE = 0x8218
         }
 
+        /// <exclude/>
         public Appointment(IMessage appointment)
             : base(appointment, MAPIObject.AppointmentItem)
         {
@@ -25,6 +29,7 @@ namespace MAPI.NET
 
         #region Public Properties
 
+        /// <exclude/>
         public string Location
         {
             get
@@ -39,6 +44,7 @@ namespace MAPI.NET
             }
         }
 
+        /// <exclude/>
         public DateTime? StartDateTime
         {
             get
@@ -53,6 +59,7 @@ namespace MAPI.NET
             }
         }
 
+        /// <exclude/>
         public DateTime? EndtDateTime
         {
             get

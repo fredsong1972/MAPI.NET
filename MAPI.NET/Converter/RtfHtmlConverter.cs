@@ -7,6 +7,9 @@ using System.IO;
 
 namespace MAPI.NET
 {
+    /// <summary>
+    /// Rtf Html Converter
+    /// </summary>
     public class RtfHtmlConverter
     {
         // Default color table used by VS's IDE.
@@ -33,7 +36,11 @@ namespace MAPI.NET
             };
 
 
-        // Escape HTML chars
+        /// <summary>
+        /// Escape HTML chars
+        /// </summary>
+        /// <param name="st">string</param>
+        /// <returns>escaped string</returns>
         static string Escape(string st)
         {
             st = st.Replace("&", "&amp");
@@ -42,8 +49,12 @@ namespace MAPI.NET
             st = st.Replace(">", "&gt;");
             return st;
         }
-        //FS: convert body text to html
 
+        /// <summary>
+        /// check if html in rtf
+        /// </summary>
+        /// <param name="rtf">rtf string</param>
+        /// <returns>true, if html in rtf; otherwise, no html.</returns>
         public static bool IsHTMLinRtf(string rtf)
         {
             // We look for the words "\fromhtml" somewhere in the file.
@@ -52,6 +63,11 @@ namespace MAPI.NET
             return rtf.Contains(@"\fromhtml");
         }
 
+        /// <summary>
+        /// convert body text to html
+        /// </summary>
+        /// <param name="rtf">rtf string</param>
+        /// <returns>html string</returns>
         public static string HtmlFromRtf(string rtf)
         {
             StringBuilder s = new StringBuilder();
@@ -102,6 +118,11 @@ namespace MAPI.NET
             return s.ToString();
         }
 
+        /// <summary>
+        /// Convert plain text to html
+        /// </summary>
+        /// <param name="text">plain text</param>
+        /// <returns>html string</returns>
         public static string HtmlFromPlainText(string text)
         {
             string html = "<html><pre>";
@@ -111,6 +132,11 @@ namespace MAPI.NET
             return html;
         }
 
+        /// <summary>
+        /// Convert html to plain text
+        /// </summary>
+        /// <param name="source">html</param>
+        /// <returns>plain text</returns>
         public static string PlainTextFromHtml(string source)
         {
             try
@@ -289,6 +315,11 @@ namespace MAPI.NET
             }
         }
 
+        /// <summary>
+        /// Convert RTF to html
+        /// </summary>
+        /// <param name="rtf">rtf</param>
+        /// <returns>html string</returns>
         public static string HtmlFromRTF2(string rtf)
         {
             StringWriter tw = new StringWriter();

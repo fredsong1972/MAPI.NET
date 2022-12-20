@@ -15,7 +15,7 @@ namespace MAPI.NET
         /// <summary>
         /// Initializes a new instance of the EntryID from a byte array.
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">id</param>
         public EntryID(byte[] id) 
         {
             id_ = id;

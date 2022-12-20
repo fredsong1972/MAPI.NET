@@ -17,6 +17,7 @@
     <FileVersion>1.0.0.1</FileVersion>
     <IncludeSymbols>True</IncludeSymbols>
     <Version>1.0.1</Version>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -155,6 +155,7 @@ namespace MAPI.NET
         /// <summary>
         /// Initializes a new instance of the MsgStore class. 
         /// </summary>
+        /// <param name="session">MAPI Session</param>
         /// <param name="msgStore">IMsgStore object</param>
         /// <param name="entryID">Entry identification of IMsgStore object</param>
         public MsgStore(MAPISession session, IMsgStore msgStore, EntryID entryID)
@@ -180,11 +181,16 @@ namespace MAPI.NET
             }
         }
 
-
+        /// <summary>
+        /// Get MAPI session
+        /// </summary>
         public MAPISession Session
         { get; private set; }
 
 
+        /// <summary>
+        /// Get Inbox entry id
+        /// </summary>
         public EntryID InboxEntryID
         {
             get
@@ -263,17 +269,28 @@ namespace MAPI.NET
             return OpenFolder((uint)PropTags.PR_IPM_WASTEBASKET_ENTRYID, MAPIObject.MailItem);
         }
 
+        /// <summary>
+        /// Open calendar folder
+        /// </summary>
+        /// <returns>calendar folder</returns>
         public MAPIFolder OpenCalendar()
         {
             return OpenSpecialFolder((uint)PropTags.PR_IPM_APPOINTMENT_ENTRYID, MAPIObject.AppointmentItem);
         }
 
+        /// <summary>
+        /// Open contact folder
+        /// </summary>
+        /// <returns>contact folder</returns>
         public MAPIFolder OpenContacts()
         {
             return OpenSpecialFolder((uint)PropTags.PR_IPM_CONTACT_ENTRYID, MAPIObject.ContactItem);
         }
 
-
+        /// <summary>
+        /// Open junk folder
+        /// </summary>
+        /// <returns>junk folder</returns>
         public MAPIFolder OpenJunkFolder()
         {
             return OpenFolder("Junk E-mail");
@@ -302,7 +319,7 @@ namespace MAPI.NET
         /// Registers to receive notification of specified events that affect the message store.
         /// </summary>
         /// <param name="eventMask">A mask of values that indicate the types of notification events that the caller is interested in and should be included in the registration. </param>
-        /// <returns></returns>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool RegisterEvents(EEventMask eventMask)
         {
             callbackHandler_ = new OnAdviseCallbackHandler(OnNotifyCallback);
@@ -330,7 +347,10 @@ namespace MAPI.NET
                 MAPIStore.Unadvise(ulConnection_);
         }
 
-
+        /// <summary>
+        /// Create a message
+        /// </summary>
+        /// <returns>MAPI message</returns>
         public MAPIMessage CreateMessage()
         {
             using (MAPIFolder folder = OpenOutbox())
@@ -340,7 +360,10 @@ namespace MAPI.NET
             }
         }
 
-     
+        /// <summary>
+        /// Create an appointnment
+        /// </summary>
+        /// <returns>appointment</returns>
         public Appointment CreateAppointment()
         {
             using (MAPIFolder folder = OpenCalendar())
@@ -350,6 +373,10 @@ namespace MAPI.NET
             }
         }
 
+        /// <summary>
+        /// Create a contact
+        /// </summary>
+        /// <returns>contact</returns>
         public Contact CreateContact()
         {
             using (MAPIFolder folder = OpenContacts())
@@ -431,12 +458,23 @@ namespace MAPI.NET
             return prop;
         }
 
+        /// <summary>
+        /// Send message
+        /// </summary>
+        /// <param name="message">message</param>
+        /// <param name="saveToSentFolder">if save message to sent folder</param>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool SendMessage(MAPIMessage message, bool saveToSentFolder)
         {
             message.SaveToSentFolder(this, saveToSentFolder);
             return message.Send();
         }
 
+        /// <summary>
+        /// Forward message
+        /// </summary>
+        /// <param name="message">original message</param>
+        /// <returns>message to forward</returns>
         public MAPIMessage ForwardMessage(MAPIMessage message)
         {
             MAPIMessage forward = CreateMessage();

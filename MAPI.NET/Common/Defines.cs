@@ -382,6 +382,9 @@ namespace MAPI.NET
         public ADRENTRY aEntries;
     }
 
+    /// <summary>
+    /// Message Format
+    /// </summary>
     public enum MessageFormat
     {
         DONTKNOW = 0,
@@ -450,7 +453,14 @@ namespace MAPI.NET
         public IntPtr lpszNameW;
     }
 
+    /// <summary>
+    /// Sensitivity: none, personal, private, confidential
+    /// </summary>
     public enum Sensitivity { SENSITIVITY_NONE, SENSITIVITY_PERSONAL, SENSITIVITY_PRIVATE, SENSITIVITY_COMPANY_CONFIDENTIAL };
+
+    /// <summary>
+    /// Importance: low, normal, high
+    /// </summary>
     public enum Importance { IMPORTANCE_LOW, IMPORTANCE_NORMAL, IMPORTANCE_HIGH };
 
     delegate void OnAdviseCallbackHandler(IntPtr pMAPI, uint cNotification, IntPtr lpNotifications);

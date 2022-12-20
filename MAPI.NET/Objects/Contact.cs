@@ -5,6 +5,9 @@ using System.Text;
 
 namespace MAPI.NET
 {
+    /// <summary>
+    ///  The Contact class is used to maintain and provide access to the properties of contacts.
+    /// </summary>
     public class Contact : MAPIMessage
     {
         enum OutlookTag
@@ -21,6 +24,7 @@ namespace MAPI.NET
             OUTLOOK_CATEGORIES = 0xF101E
         }
 
+        /// <exclude/>
         public Contact(IMessage contact)
             : base(contact, MAPIObject.ContactItem)
         {
@@ -82,7 +86,9 @@ namespace MAPI.NET
             }
         }
 
-
+        /// <summary>
+        /// Gets/sets Middle Name
+        /// </summary>
         public string MiddleName
         {
             get
@@ -187,8 +193,8 @@ namespace MAPI.NET
             }
         }
 
-        // <summary>
-        /// Gets/Sets BusinessFaxNumber
+        /// <summary>
+        /// Gets/Sets Bussiness Fax Number
         /// </summary>
         public string BusinessFaxNumber
         {

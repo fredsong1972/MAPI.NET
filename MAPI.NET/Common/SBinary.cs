@@ -6,6 +6,9 @@ using System.Runtime.InteropServices;
 
 namespace MAPI.NET
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [StructLayout(LayoutKind.Sequential)]
     internal struct SBinary
     {

@@ -91,7 +91,7 @@ namespace MAPI.NET
         /// <summary>
         /// Constructor
         /// </summary>
-        /// <param name="attach"></param>
+        /// <param name="attach">attach</param>
         public Attachment(IAttach attach)
             : base(attach, null)
         {

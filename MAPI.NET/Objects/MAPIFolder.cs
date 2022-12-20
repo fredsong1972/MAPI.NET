@@ -259,7 +259,11 @@ namespace MAPI.NET
              }
           
         }
-
+        /// <summary>
+        /// Initializes a new instance of the MAPIFolder class.
+        /// </summary>
+        /// <param name="folder">folder</param>
+        /// <param name="defaultItemType">defaultItemType</param>
         public MAPIFolder(IMAPIFolder folder, string defaultItemType) : base(folder)
         {
             IPropValue prop = GetProperty(PropTags.PR_DISPLAY_NAME);
@@ -305,6 +309,9 @@ namespace MAPI.NET
             }
         }
 
+        /// <summary>
+        /// Gets default item type
+        /// </summary>
         public string DefaultItemType
         {
             get
@@ -355,12 +362,24 @@ namespace MAPI.NET
             return null;
         }
 
+        /// <summary>
+        /// Copy one message to different folder
+        /// </summary>
+        /// <param name="message">message</param>
+        /// <param name="destFolder">destination folder</param>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool CopyMessages(MAPIMessage message, MAPIFolder destFolder)
         {
             return CopyMessages(new List<MAPIMessage>(new MAPIMessage[] { message }), destFolder);
 
         }
 
+        /// <summary>
+        /// Copy messages to different folder
+        /// </summary>
+        /// <param name="messages">List of messages</param>
+        /// <param name="destFolder">destination folder</param>
+        /// <returns>true, if successful; otherwise, failed.</returns>
         public bool CopyMessages(List<MAPIMessage> messages, MAPIFolder destFolder)
         {
             List<EntryID> msgEntryIds = new List<EntryID>();
@@ -397,6 +416,11 @@ namespace MAPI.NET
       
         }
 
+        /// <summary>
+        /// Open a subfolder
+        /// </summary>
+        /// <param name="name">subfolder name</param>
+        /// <returns>MAPI Folder</returns>
         public MAPIFolder OpenSubFolder(string name)
         {
             if (Hierarchy == null)
