@@ -52,7 +52,7 @@ Some articles for MAPI.NET include:
 
 ## Examples
 
-Refer to [`SpamBounce`](https://www.codeproject.com/Articles/455823/Managed-MAPI-Part-1-Logon-MAPI-Session-and-Retriev) for a complete demo.
+Refer to [`SpamBounce`](https://github.com/fredsong1972/MAPI.NET/tree/main/SpamBounce) for a complete demo.
 
 ## Document
 
