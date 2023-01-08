@@ -56,4 +56,4 @@ Refer to [`SpamBounce`](https://www.codeproject.com/Articles/455823/Managed-MAPI
 
 ## Document
 
-[here](Help/Home.md)
+[here](https://github.com/fredsong1972/MAPI.NET/blob/main/Help/Home.md)
