@@ -199,7 +199,7 @@ namespace MAPI.NET
                 IntPtr lpb;
                 EntryID entry = null;
                 HRESULT hResult = MAPIStore.GetReceiveFolder("", 0, out cb, out lpb, new StringBuilder());
-                if (hResult == HRESULT.S_OK && cb > 0 && lpb != null && lpb != IntPtr.Zero)
+                if (hResult == HRESULT.S_OK && cb > 0 && lpb != IntPtr.Zero)
                 {
                     entry = EntryID.BuildFromPtr(cb, lpb);
                     MAPINative.MAPIFreeBuffer(lpb);
@@ -445,7 +445,7 @@ namespace MAPI.NET
             try
             {
                 HRESULT hResult = MAPIStore.OpenEntry(sb.cb, sb.lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objectType, out pObject);
-                if (hResult == HRESULT.S_OK && pObject != null)
+                if (hResult == HRESULT.S_OK)
                 {
                     prop = Marshal.GetObjectForIUnknown(pObject) as IMAPIProp;
                 }
@@ -612,7 +612,7 @@ namespace MAPI.NET
                 uint objType;
                 IntPtr pObj;
                 hResult = MAPIStore.OpenEntry(cb, lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objType, out pObj);
-                if (hResult == HRESULT.S_OK && pObj != null)
+                if (hResult == HRESULT.S_OK)
                 {
                     inbox = Marshal.GetObjectForIUnknown(pObj) as IMAPIFolder;
                 }
@@ -629,7 +629,7 @@ namespace MAPI.NET
                     try
                     {
                         hResult = MAPIStore.OpenEntry(entryId.cb, entryId.lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objType, out pObj);
-                        if (hResult == HRESULT.S_OK && pObj != null)
+                        if (hResult == HRESULT.S_OK)
                         {
                             IMAPIFolder folder = Marshal.GetObjectForIUnknown(pObj) as IMAPIFolder;
                             if (folder != null)
@@ -663,7 +663,7 @@ namespace MAPI.NET
                 try
                 {
                     HRESULT hResult = MAPIStore.OpenEntry(entryId.cb, entryId.lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objType, out pObj);
-                    if (hResult == HRESULT.S_OK && pObj != null)
+                    if (hResult == HRESULT.S_OK)
                     {
                         IMAPIFolder folder = Marshal.GetObjectForIUnknown(pObj) as IMAPIFolder;
                         if (folder != null)
@@ -689,7 +689,7 @@ namespace MAPI.NET
             uint objType;
             IntPtr pObj;
             HRESULT hResult = MAPIStore.OpenEntry(cb, lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objType, out pObj);
-            if (hResult == HRESULT.S_OK && pObj != null)
+            if (hResult == HRESULT.S_OK)
             {
                 IMAPIFolder folder = Marshal.GetObjectForIUnknown(pObj) as IMAPIFolder;
                 if (folder != null)

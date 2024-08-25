@@ -438,7 +438,7 @@ namespace MAPI.NET
             try
             {
                 HRESULT hResult = session_.OpenEntry(sb.cb, sb.lpb, IntPtr.Zero, (uint)MAPIFlag.BEST_ACCESS, out objectType, out pObject);
-                if (hResult == HRESULT.S_OK && pObject != null)
+                if (hResult == HRESULT.S_OK)
                 {
                     prop = Marshal.GetObjectForIUnknown(pObject) as IMAPIProp;
                 }

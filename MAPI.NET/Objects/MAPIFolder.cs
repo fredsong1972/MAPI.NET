@@ -446,7 +446,7 @@ namespace MAPI.NET
                 uint objectType;
                 IntPtr pSubFolder;
                 HRESULT hResult = Folder.OpenEntry(sb.cb, sb.lpb, IntPtr.Zero, (uint)OpenPropertyMode.MODIFY, out objectType, out pSubFolder);
-                if (hResult == HRESULT.S_OK && pSubFolder != null && pSubFolder != IntPtr.Zero && objectType == (uint)ObjectType.MAPI_FOLDER)
+                if (hResult == HRESULT.S_OK && pSubFolder != IntPtr.Zero && objectType == (uint)ObjectType.MAPI_FOLDER)
                 {
                     IMAPIFolder mapiObj = Marshal.GetObjectForIUnknown(pSubFolder) as IMAPIFolder;
                     if (mapiObj != null)
@@ -469,7 +469,7 @@ namespace MAPI.NET
                 {
                     IntPtr pTable;
                     HRESULT hResult = Folder.GetHierarchyTable(0, out pTable);
-                    if (hResult == HRESULT.S_OK && pTable != null && pTable != IntPtr.Zero)
+                    if (hResult == HRESULT.S_OK && pTable != IntPtr.Zero)
                     {
                         IMAPITable t = Marshal.GetObjectForIUnknown(pTable) as IMAPITable;
                         if (t != null)

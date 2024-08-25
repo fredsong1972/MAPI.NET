@@ -1972,21 +1972,43 @@ namespace MAPI.NET
         /// <br></br>Data Type: PT_LONG
         /// </summary>
         PR_STATUS_CODE = PT.PT_LONG | 0x3E04 << 16,
-
-        PR_IPM_APPOINTMENT_ENTRYID  = PT.PT_BINARY | 0x36D0 << 16,
+        /// <summary>
+        /// Contains the EntryID of appointment
+        /// </summary>
+        PR_IPM_APPOINTMENT_ENTRYID = PT.PT_BINARY | 0x36D0 << 16,
+        /// <summary>
+        /// Contains the EntryID of contact
+        /// </summary>
         PR_IPM_CONTACT_ENTRYID = PT.PT_BINARY | 0x36D1 << 16,
+        /// <summary>
+        /// Contains the EntryID of journal
+        /// </summary>
         PR_IPM_JOURNAL_ENTRYID = PT.PT_BINARY | 0x36D2 << 16,
+        /// <summary>
+        /// Contains the EntryID of note
+        /// </summary>
         PR_IPM_NOTE_ENTRYID = PT.PT_BINARY | 0x36D3 << 16,
+        /// <summary>
+        /// Contains the EntryID of task
+        /// </summary>
         PR_IPM_TASK_ENTRYID = PT.PT_BINARY | 0x36D4 << 16,
         /// <summary>
         /// Contains the EntryID of the Outlook Drafts folder.
         /// <br></br>Data Type: PT_BINARY
         /// </summary>
         PR_IPM_DRAFTS_ENTRYID  = PT.PT_BINARY | 0x36D7 << 16,
+        /// <summary>
+        /// Container Class
+        /// </summary>
         PR_CONTAINER_CLASS = PT.PT_TSTRING | 0x3613 << 16,
         //PR_DEF_POST_MSGCLASS = 0x36E5001E,
+        /// <summary>
+        /// Boody HTML
+        /// </summary>
         PR_BODY_HTML =  PT.PT_TSTRING | 0x1013 << 16,
-
+        /// <summary>
+        /// Compressed RTF
+        /// </summary>
         PR_RTF_COMPRESSED = PT.PT_BINARY |	0x1009 << 16,
 
         #endregion

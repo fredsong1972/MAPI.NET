@@ -60,7 +60,7 @@ namespace MAPI.NET
 
                 }
             }
-            if (p != null && p != IntPtr.Zero)
+            if (p != IntPtr.Zero)
                 Marshal.FreeHGlobal(p);
         }
     }

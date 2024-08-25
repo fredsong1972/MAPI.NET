@@ -387,10 +387,25 @@ namespace MAPI.NET
     /// </summary>
     public enum MessageFormat
     {
+        /// <summary>
+        /// DONTKNOW
+        /// </summary>
         DONTKNOW = 0,
+        /// <summary>
+        /// PLAINTEXT
+        /// </summary>
         PLAINTEXT = 1,
+        /// <summary>
+        /// HTML
+        /// </summary>
         HTML = 2,
+        /// <summary>
+        /// RTF
+        /// </summary>
         RTF = 3,
+        /// <summary>
+        /// RTFHTML
+        /// </summary>
         RTFHTML = 4,
     }
   
@@ -456,12 +471,44 @@ namespace MAPI.NET
     /// <summary>
     /// Sensitivity: none, personal, private, confidential
     /// </summary>
-    public enum Sensitivity { SENSITIVITY_NONE, SENSITIVITY_PERSONAL, SENSITIVITY_PRIVATE, SENSITIVITY_COMPANY_CONFIDENTIAL };
+    public enum Sensitivity 
+    {
+        /// <summary>
+        /// SENSITIVITY_NONE
+        /// </summary>
+        SENSITIVITY_NONE,
+        /// <summary>
+        /// SENSITIVITY_PERSONAL
+        /// </summary>
+        SENSITIVITY_PERSONAL,
+        /// <summary>
+        /// SENSITIVITY_PRIVATE
+        /// </summary>
+        SENSITIVITY_PRIVATE,
+        /// <summary>
+        /// SENSITIVITY_COMPANY_CONFIDENTIAL
+        /// </summary>
+        SENSITIVITY_COMPANY_CONFIDENTIAL
+    };
 
     /// <summary>
     /// Importance: low, normal, high
     /// </summary>
-    public enum Importance { IMPORTANCE_LOW, IMPORTANCE_NORMAL, IMPORTANCE_HIGH };
+    public enum Importance 
+    {
+        /// <summary>
+        /// IMPORTANCE_LOW
+        /// </summary>
+        IMPORTANCE_LOW,
+        /// <summary>
+        /// IMPORTANCE_NORMAL
+        /// </summary>
+        IMPORTANCE_NORMAL,
+        /// <summary>
+        /// IMPORTANCE_HIGH
+        /// </summary>
+        IMPORTANCE_HIGH
+    };
 
     delegate void OnAdviseCallbackHandler(IntPtr pMAPI, uint cNotification, IntPtr lpNotifications);
     delegate HRESULT AllocateBuffer(uint size, out IntPtr pBuffer);

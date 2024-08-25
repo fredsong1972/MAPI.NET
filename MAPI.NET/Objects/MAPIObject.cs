@@ -593,8 +593,7 @@ namespace MAPI.NET
             }
             foreach (MAPINAMEID n in names)
             {
-                if (n.pGuid != null)
-                    Marshal.FreeHGlobal(n.pGuid);
+                Marshal.FreeHGlobal(n.pGuid);
             }
             return tags.ToArray();
         }

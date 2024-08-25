@@ -885,7 +885,7 @@ namespace MAPI.NET
                 uint attachNum = (uint)sRows[0].propVals[0].AsInt32;
                 IntPtr pAttach;
                 HRESULT hr = Message.OpenAttach(attachNum, IntPtr.Zero, 0, out pAttach);
-                if (hr == HRESULT.S_OK && pAttach != null)
+                if (hr == HRESULT.S_OK)
                 {
                     Attachment attach = new Attachment(Marshal.GetObjectForIUnknown(pAttach) as IAttach);
                     if (string.IsNullOrEmpty(fileName))
@@ -943,7 +943,7 @@ namespace MAPI.NET
         {
             IntPtr pObject = OpenProperty((uint)PropTags.PR_RTF_COMPRESSED, Storage.IID_Stream, OpenPropertyMode.READ);
             StringBuilder rtf = new StringBuilder();
-            if (pObject != null && pObject != IntPtr.Zero)
+            if (pObject != IntPtr.Zero)
             {
                 Ole.IStream compressedStream = Marshal.GetObjectForIUnknown(pObject) as Ole.IStream;
                 Ole.IStream uncompressedStream;
@@ -974,7 +974,7 @@ namespace MAPI.NET
         private void SetRTFBody(string value)
         {
             IntPtr pObject = OpenProperty((uint)PropTags.PR_RTF_COMPRESSED, Storage.IID_Stream, (uint)(STGM.CREATE | STGM.WRITE), OpenPropertyMode.MODIFY | OpenPropertyMode.CREATE);
-            if (pObject != null && pObject != IntPtr.Zero)
+            if (pObject != IntPtr.Zero)
             {
                 Ole.IStream compressedStream = Marshal.GetObjectForIUnknown(pObject) as Ole.IStream;
                 Ole.IStream uncompressedStream;
